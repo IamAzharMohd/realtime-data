@@ -1,7 +1,35 @@
-<%-include('./partials/head.ejs') %> 
-    <h1>Hello, it's a good day!</h1>
-<%-include('./partials/footer.ejs') %> 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- local style -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>To do List | <%=title %> </title>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center min-vh-100">
+        <div class="bg-white p-3 my-3 border">
+            <h1>To do List</h1>
+            <form action="/" method="POST" class="d-flex ">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="list" placeholder="Add new list">
+                    <label for="list">To do list</label>
+                </div>
+                <button type="submit" class="btn btn-info mx-3 text-white">Add</button>
+            </form>
+
+        </div>
+
+    </div>
 
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  
+  </body>
+</html>

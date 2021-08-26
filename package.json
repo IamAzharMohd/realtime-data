@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/IamAzharMohd/Template-Express.git"
   },
-  "author": "",
+  "author": "azhar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/IamAzharMohd/Template-Express/issues"
@@ -22,5 +22,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.3",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {}
 }

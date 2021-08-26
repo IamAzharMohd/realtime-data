@@ -1,3 +1,2 @@
-# Template-Express
-express project template
-with Bootstrap 5 cuz i'm lazy
+# Realtime-data-monitor
+monitor changes in database
