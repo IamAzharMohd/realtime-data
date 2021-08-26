@@ -25,14 +25,30 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }))
 
+const Pusher = require("pusher");
+
+const pusher = new Pusher({
+  appId: "1256813",
+  key: "d68418bc79c3238fc99d",
+  secret: "af162ce19b3b669db504",
+  cluster: "ap1",
+  useTLS: true
+});
+
+//dummy data
+
+let Todo = [];
+
 //routes
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' })
+    console.log(Todo)
+    res.render('index', { title: 'Home', Todo })
 })
 
 app.post('/', (req, res) => {
-    let new_data = req.body;
-    res.json(new_data)
     console.log(req.body);
-    // res.render('index', { title: 'Home' })
+    Todo.push(req.body)
+    pusher.trigger("todoList", "newList", req.body );
+    
+    res.json({ msg: 'success' });
 })
